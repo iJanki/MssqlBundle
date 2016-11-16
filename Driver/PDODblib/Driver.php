@@ -73,9 +73,9 @@ class Driver implements \Doctrine\DBAL\Driver
 
         } else {
 
-            $dsn = 'dblib:';
+            $dsn = 'odbc:DRIVER=FreeTDS;';
             if (isset($params['host'])) {
-                $dsn .= 'host=' . $params['host'] . ';';
+                $dsn .= 'SERVERNAME=' . $params['host'] . ';';
             }
             if (isset($params['port'])) {
                 $dsn .= 'port=' . $params['port'] . ';';
